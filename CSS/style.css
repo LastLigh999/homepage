@@ -1,11 +1,12 @@
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+html, body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #C8C8C8;
 }
 
 /* header */
 header{
+    margin: auto;
     display: flex;
     max-width: 1000px;
     background-color: aqua;
@@ -50,6 +51,62 @@ header>img{
 
 
 /* main */
-
+main{
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+}
+.container{
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 10px;
+    
+}
+.card{
+    border: solid 1px black;
+    background-color: #D5D8DC;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+.card:hover{
+    background-color: blue;
+    transition: background-color 1s;
+}
+.card > img{
+    width: 100%;
+    height: 200px;
+}
+.card > div{
+    padding: 20px;
+}
 
 /* footer */
+
+footer{
+    padding: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background-color: aqua;
+    flex-wrap: wrap;
+}
+footer > div{
+    max-width: 300px;
+}
+footer > img{
+    max-width: 320px;
+    max-height: 320px;
+}
+
+@media (max-width:600px){
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer > div{
+        max-width: 400px;
+    }
+
+}
