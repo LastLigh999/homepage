@@ -6,12 +6,15 @@ html, body{
 
 /* header */
 header{
+    position: relative;
     margin: auto;
     display: flex;
-    max-width: 1000px;
+    max-width: 1100px;
     background-color: aqua;
     padding: 20px;
     transition: width 2s ease-in;
+    box-shadow: 0px 1px 2px black;
+    z-index: 1;
 }
 header>img{
     max-width: 300px;
@@ -52,6 +55,7 @@ header>img{
 
 /* main */
 main{
+
     max-width: 1000px;
     margin: auto;
     padding: 20px;
@@ -68,11 +72,17 @@ main{
     border: solid 1px black;
     background-color: #D5D8DC;
     user-select: none;
-    transition: background-color 0.2s;
+    box-shadow: 2px 2px 5px black;
+    transition-property: background-color,box-shadow,transform;
+    transition-duration: 0.2s;
 }
 .card:hover{
-    background-color: blue;
-    transition: background-color 1s;
+    background-color: white;
+    box-shadow: 0px 0px 10px 5px cyan;
+    transition-property: background-color,box-shadow,transform;
+    transition-duration: 1s, 0.5s, 1s;
+    border: solid 2px black;
+    transform: scale(1.05);
 }
 .card > img{
     width: 100%;
@@ -91,6 +101,7 @@ footer{
     padding: 30px;
     background-color: aqua;
     flex-wrap: wrap;
+    border: solid 1px black;
 }
 footer > div{
     max-width: 300px;
